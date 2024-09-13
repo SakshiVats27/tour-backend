@@ -14,7 +14,7 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 8000;
 const corsOptions = {
-    origin:true,
+    origin:"https://tour-frontend-zt12.vercel.app/",
     credentials:true
 }
 
@@ -37,7 +37,7 @@ const connect = async()=>{
 
 //middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use('/api/v1/auth',authRoute);
 app.use('/api/v1/tours',tourRoute);
