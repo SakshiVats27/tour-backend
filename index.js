@@ -15,7 +15,7 @@ const app = express();
 const port = process.env.PORT || 8000;
 app.use(cors(
     {
-    origin : ["https://tour-frontend-tau.vercel.app"],
+    origin : ["https://tour-frontend-tau.vercel.app/"],
     methods :["POST", "GET"],
     credentials: true
     }
