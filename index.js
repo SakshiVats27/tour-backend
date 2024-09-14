@@ -12,9 +12,9 @@ import bookingRoute from './routes/bookings.js';
 
 dotenv.config();
 const app = express();
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 4000;
 const corsOptions = {
-    origin:"https://tour-frontend-zt12.vercel.app/",
+    origin:true,
     credentials:true
 }
 
@@ -45,9 +45,7 @@ app.use('/api/v1/users', userRoute);
 app.use('/api/v1/review', reviewRoute);
 app.use('/api/v1/booking', bookingRoute);
 
-app.get("/" , (req, res) =>{
-    res.send("Api working!")
-  })
+
 
 app.listen(port, ()=>{
     connect();
